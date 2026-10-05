@@ -1,3 +1,4 @@
+import { Instagram } from 'lucide-react';
 import { RevealOnScroll } from './RevealOnScroll';
 import { weddingData } from '../data/weddingData';
 
@@ -5,7 +6,7 @@ export function FooterSection() {
   const { couple, footer } = weddingData;
 
   return (
-    <footer className="relative isolate overflow-hidden pt-24 pb-12 text-center">
+    <footer className="relative isolate overflow-hidden pt-24 pb-10 text-center">
       <img
         src="/assets/footer-floral.jpg"
         alt=""
@@ -41,6 +42,20 @@ export function FooterSection() {
             {couple.hashtag}
           </p>
           <span className="h-px w-10 bg-gradient-to-l from-transparent to-gold" />
+        </div>
+
+        <div className="mt-14 pt-6 border-t border-gold/25">
+          <a
+            href="https://www.instagram.com/zetron.tech"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center justify-center gap-2.5 text-gold transition-opacity hover:opacity-80"
+          >
+            <Instagram className="size-4 shrink-0 transition-transform group-hover:scale-110" strokeWidth={1.8} />
+            <span className="font-display text-[0.72rem] tracking-[0.38em] uppercase text-gold">
+              CRAFTED BY ZETRON.TECH
+            </span>
+          </a>
         </div>
       </RevealOnScroll>
     </footer>
