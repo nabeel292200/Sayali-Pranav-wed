@@ -8,7 +8,7 @@ An elegant, interactive engagement invitation web application for Sayali Bhosale
 - **Hero Section:** Couple portrait framed within an ornamental golden arch with Great Vibes cursive typography.
 - **Save the Date:** Interactive HTML5 canvas scratch card with golden metallic foil.
 - **Family Blessings:** Bride & Groom family tribute cards.
-- **Event Details:** Date, time, venue, dress code, RSVP dial link, and Google Calendar export.
+- **Event Details:** Date, time, venue, RSVP dial link, and Google Calendar export.
 - **Venue & Maps:** Interactive map preview with direct navigation directions.
 - **Background Music:** Ambient wedding music with custom floating audio controller.
 

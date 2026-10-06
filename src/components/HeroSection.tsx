@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { GaneshaBadge } from './GaneshaBadge';
 import { useGate } from '../context/GateContext';
 import { weddingData } from '../data/weddingData';
 
@@ -41,24 +40,12 @@ export function HeroSection() {
         />
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: -12 }}
-        animate={isOpened ? { opacity: 1, y: 0 } : false}
-        transition={{ duration: 1.1, delay: 0.1 }}
-        className="absolute inset-x-0 top-0 z-20 flex flex-col items-center pt-5"
-      >
-        <GaneshaBadge className="size-16" />
-        <p className="mt-2 rounded-full bg-parchment/75 px-4 py-0.5 font-display text-base tracking-[0.14em] text-royal backdrop-blur-[2px]">
-          ॥ Shree Ganesha Namah ॥
-        </p>
-      </motion.div>
-
       <div className="relative z-20 -mt-9 w-full px-6 pb-4 text-center">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={isOpened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-[0.7rem] tracking-[0.42em] text-ink/70 uppercase"
+          className="text-[0.68rem] tracking-[0.22em] text-ink/75 uppercase sm:tracking-[0.3em]"
         >
           {invite.kicker}
         </motion.p>

@@ -1,4 +1,4 @@
-import { Clock, MapPin, Shirt, CalendarPlus } from 'lucide-react';
+import { Clock, MapPin, CalendarPlus } from 'lucide-react';
 import { RevealOnScroll } from './RevealOnScroll';
 import { weddingData } from '../data/weddingData';
 
@@ -7,7 +7,7 @@ const formatCalendarDate = (dateStr: string) =>
 
 function getGoogleCalendarUrl() {
   const { event, venue, invite } = weddingData;
-  const details = `${invite.kicker} — ${invite.line}\n\nVenue: ${venue.name}, ${venue.address}\n\nDress code: ${event.dressCode}\n\nNote: ${event.note}\n`;
+  const details = `${invite.kicker} — ${invite.line}\n\nVenue: ${venue.name}, ${venue.address}\n\nNote: ${event.note}\n`;
   const params = new URLSearchParams({
     action: 'TEMPLATE',
     text: event.title,
@@ -53,10 +53,6 @@ export function EventDetailsSection() {
                 <br />
                 <span className="text-ink/60">{venue.address}</span>
               </span>
-            </li>
-            <li className="flex items-center justify-center gap-2">
-              <Shirt className="size-4 shrink-0 text-gold" aria-hidden="true" />
-              <span>{event.dressCode}</span>
             </li>
           </ul>
 

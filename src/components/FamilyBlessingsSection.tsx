@@ -12,6 +12,9 @@ export function FamilyBlessingsSection() {
         <h2 className="font-display text-3xl tracking-[0.14em] text-parchment uppercase">
           With the Blessings of
         </h2>
+        <p className="mt-2 font-display text-lg tracking-[0.18em] text-gold uppercase">
+          Bhosale &amp; Sangle Family
+        </p>
         <div className="gold-rule mx-auto mt-4 w-24" />
       </RevealOnScroll>
 

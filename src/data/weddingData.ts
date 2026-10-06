@@ -27,7 +27,7 @@ export interface WeddingData {
     dateLabel: string;
     dayLabel: string;
     timeLabel: string;
-    dressCode: string;
+    dressCode?: string;
     note: string;
     contact?: string;
   };
@@ -60,7 +60,7 @@ export const weddingData: WeddingData = {
     hashtag: "#SayaliPranav",
   },
   invite: {
-    kicker: "Together with their families",
+    kicker: "With blessings of Bhosale & Sangle Family",
     line: "cordially invite you to celebrate their engagement",
   },
   families: {
@@ -82,9 +82,8 @@ export const weddingData: WeddingData = {
     dateLabel: "25 . 10 . 2026",
     dayLabel: "Sunday",
     timeLabel: "11 AM onwards",
-    dressCode: "Traditional / Festive Attire",
     note: "Celebratory lunch to follow",
-    contact: "7083551252",
+    contact: "9881887547",
   },
   venue: {
     name: "GITAI Lawns & Banquets",
@@ -119,9 +118,9 @@ export const weddingData: WeddingData = {
     line: "May your intentions be one, may your hearts beat as one.",
     translation:
       "Two families, one thread of gold — and a lifetime of happiness made luminous together.",
-    source: "A blessing from both families",
+    source: "With blessings of Bhosale & Sangle Family",
   },
   footer: {
-    families: "With love & warm wishes from the Families",
+    families: "With blessings of Bhosale & Sangle Family",
   },
 };
