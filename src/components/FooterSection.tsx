@@ -49,10 +49,10 @@ export function FooterSection() {
             href="https://www.instagram.com/zetron.tech"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center justify-center gap-2.5 text-gold transition-opacity hover:opacity-80"
+            className="group inline-flex items-center justify-center gap-2.5 text-[#582960] transition-opacity hover:opacity-80"
           >
-            <Instagram className="size-4 shrink-0 transition-transform group-hover:scale-110" strokeWidth={1.8} />
-            <span className="font-display text-[0.72rem] tracking-[0.38em] uppercase text-gold">
+            <Instagram className="size-4 shrink-0 transition-transform group-hover:scale-110 text-[#582960]" strokeWidth={1.8} />
+            <span className="font-display text-[0.72rem] tracking-[0.38em] uppercase text-[#582960]">
               CRAFTED BY ZETRON.TECH
             </span>
           </a>
