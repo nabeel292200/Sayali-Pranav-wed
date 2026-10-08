@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { useGate } from '../context/GateContext';
 import { weddingData } from '../data/weddingData';
 
@@ -13,6 +14,15 @@ export function HeroSection() {
   const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const isOpened = useGate();
   const { couple, invite, event, venue } = weddingData;
+
+  const handleScrollDown = () => {
+    const nextSection = document.getElementById('countdown');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section
@@ -106,13 +116,28 @@ export function HeroSection() {
         style={{ opacity: scrollIndicatorOpacity }}
         className="relative z-20 mt-auto pb-6 text-center"
       >
-        <span className="text-[0.6rem] tracking-[0.3em] text-ink/60 uppercase">scroll</span>
-        <motion.div
-          animate={{ scaleY: [0.2, 1, 0.2] }}
-          style={{ originY: 0 }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-          className="mx-auto mt-2 h-8 w-px bg-gold"
-        />
+        <motion.button
+          type="button"
+          onClick={handleScrollDown}
+          initial={{ opacity: 0, y: 12 }}
+          animate={isOpened ? { opacity: 1, y: 0 } : false}
+          transition={{ duration: 1, delay: 1.4 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Scroll down to view invitation details"
+          className="group relative inline-flex cursor-pointer items-center gap-2.5 rounded-full border border-gold/70 bg-parchment/95 px-5 py-2.5 shadow-[0_4px_16px_rgba(34,18,24,0.12)] backdrop-blur-md transition-all duration-300 hover:border-gold hover:bg-royal hover:shadow-[0_8px_24px_rgba(34,18,24,0.22)] focus:outline-none"
+        >
+          <span className="text-[0.72rem] font-medium tracking-[0.22em] text-royal uppercase transition-colors group-hover:text-parchment sm:text-xs">
+            Scroll to explore
+          </span>
+          <motion.span
+            animate={{ y: [0, 4, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+            className="flex size-5 items-center justify-center rounded-full bg-royal text-parchment transition-colors group-hover:bg-gold group-hover:text-royal-deep"
+          >
+            <ChevronDown className="size-3.5 stroke-[2.5]" />
+          </motion.span>
+        </motion.button>
       </motion.div>
     </section>
   );

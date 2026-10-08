@@ -19,10 +19,6 @@ export function BlessingSection() {
           “{blessing.translation}”
         </p>
 
-        <p className="mt-4 text-[0.6rem] tracking-[0.3em] text-gold uppercase">
-          {blessing.source}
-        </p>
-
         <div className="gold-rule mx-auto mt-8 w-20" />
       </RevealOnScroll>
     </section>

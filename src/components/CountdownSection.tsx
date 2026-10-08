@@ -44,23 +44,25 @@ export function CountdownSection() {
   const { event } = weddingData;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-royal-deep via-royal to-royal-deep px-5 py-20">
-      <div aria-hidden="true" className="jaali absolute inset-0 opacity-[0.12]" />
+    <section id="countdown" className="relative overflow-hidden bg-gradient-to-b from-mist to-mist-deep px-5 py-16">
+      <RevealOnScroll className="mx-auto max-w-md text-center">
+        <h2 className="font-display text-3xl tracking-[0.14em] text-royal uppercase">
+          Counting Down
+        </h2>
 
-      <RevealOnScroll className="relative mx-auto max-w-lg text-center">
-        <p className="text-[0.65rem] tracking-[0.4em] text-gold-soft uppercase">
-          {timeLeft?.done ? 'Today is the day' : 'Counting down to the engagement'}
+        <div className="gold-rule mx-auto mt-4 w-24" />
+
+        <p className="mt-4 font-display text-lg italic text-ink/70">
+          {timeLeft?.done ? 'Today is the special day!' : 'Until our special day'}
         </p>
-
-        <div className="gold-rule mx-auto mt-5 w-32" />
 
         <div className="mt-8 grid grid-cols-4 gap-2 sm:gap-3">
           {COUNTDOWN_ITEMS.map(({ key, label }) => (
             <div
               key={key}
-              className="relative overflow-hidden rounded-t-[2.2rem] border border-gold/60 bg-royal-deep/70 px-1 py-5 shadow-[0_10px_30px_-18px_black] backdrop-blur-[1px]"
+              className="relative overflow-hidden rounded-t-[2.2rem] rounded-b-xl border border-gold/70 bg-royal-deep px-1 py-5 shadow-[0_16px_36px_-18px_var(--color-royal-deep)]"
             >
-              <div className="pointer-events-none absolute inset-x-2 top-2 h-8 rounded-t-[1.8rem] border border-gold/25" />
+              <div className="pointer-events-none absolute inset-x-2 top-2 h-7 rounded-t-[1.8rem] border border-gold/30" />
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.span
                   key={`${key}-${timeLeft?.[key] ?? '-'}`}
@@ -73,14 +75,14 @@ export function CountdownSection() {
                   {timeLeft ? String(timeLeft[key]).padStart(2, '0') : '--'}
                 </motion.span>
               </AnimatePresence>
-              <span className="mt-2 block text-[0.55rem] tracking-[0.25em] text-gold-soft uppercase">
+              <span className="mt-2 block text-[0.55rem] tracking-[0.25em] text-gold uppercase">
                 {label}
               </span>
             </div>
           ))}
         </div>
 
-        <p className="mt-6 font-display text-lg italic text-parchment/85">
+        <p className="mt-6 font-display text-lg italic text-ink/75">
           {event.dayLabel}, {event.timeLabel}
         </p>
       </RevealOnScroll>

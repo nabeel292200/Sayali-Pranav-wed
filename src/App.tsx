@@ -3,7 +3,7 @@ import { ScrollProgress } from './components/ScrollProgress';
 import { FloatingPetals } from './components/FloatingPetals';
 import { AudioFloatingButton } from './components/AudioFloatingButton';
 import { HeroSection } from './components/HeroSection';
-import { SaveTheDateCard } from './components/SaveTheDateCard';
+import { CountdownSection } from './components/CountdownSection';
 import { FamilyBlessingsSection } from './components/FamilyBlessingsSection';
 import { EventDetailsSection } from './components/EventDetailsSection';
 import { VenueSection } from './components/VenueSection';
@@ -18,7 +18,7 @@ export default function App() {
         <FloatingPetals />
         <AudioFloatingButton />
         <HeroSection />
-        <SaveTheDateCard />
+        <CountdownSection />
         <FamilyBlessingsSection />
         <EventDetailsSection />
         <VenueSection />

@@ -8,11 +8,11 @@ export function FamilyBlessingsSection() {
     <section className="relative overflow-hidden bg-gradient-to-b from-royal-deep via-royal to-royal-deep px-5 py-16">
       <div aria-hidden="true" className="jaali absolute inset-0 opacity-[0.12]" />
 
-      <RevealOnScroll className="relative text-center">
-        <h2 className="font-display text-3xl tracking-[0.14em] text-parchment uppercase">
-          With the Blessings of
+      <RevealOnScroll className="relative text-center px-4">
+        <h2 className="mx-auto max-w-sm font-display text-2xl sm:text-3xl tracking-[0.14em] text-parchment uppercase leading-tight [text-wrap:balance]">
+          Together With Their Families
         </h2>
-        <p className="mt-2 font-display text-lg tracking-[0.18em] text-gold uppercase">
+        <p className="mt-2 font-display text-base sm:text-lg tracking-[0.16em] text-gold uppercase">
           Bhosale &amp; Sangle Family
         </p>
         <div className="gold-rule mx-auto mt-4 w-24" />

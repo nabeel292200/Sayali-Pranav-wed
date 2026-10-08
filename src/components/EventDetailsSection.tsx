@@ -66,24 +66,15 @@ export function EventDetailsSection() {
             </p>
           )}
 
-          <div className="relative mt-8 flex flex-col gap-3">
+          <div className="relative mt-8 flex justify-center">
             <a
               href={getGoogleCalendarUrl()}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-royal px-6 py-3.5 text-[0.7rem] tracking-[0.24em] text-parchment uppercase transition-transform duration-200 active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-royal px-8 py-3.5 text-[0.7rem] tracking-[0.24em] text-parchment uppercase shadow-[0_8px_20px_-8px_var(--color-royal-deep)] transition-transform duration-200 hover:bg-royal/90 active:scale-95"
             >
               <CalendarPlus className="size-4 transition-transform group-hover:rotate-6" />
               Add to calendar
-            </a>
-
-            <a
-              href={venue.url}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-gold/60 py-3 text-[0.65rem] tracking-[0.2em] text-ink/75 uppercase transition-colors hover:bg-gold/10"
-            >
-              Directions
             </a>
           </div>
         </div>
