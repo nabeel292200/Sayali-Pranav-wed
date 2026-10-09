@@ -67,12 +67,12 @@ export const weddingData: WeddingData = {
     groom: {
       label: "The Groom",
       name: "Pranav Sangle",
-      parents: "S/O Mr. Sampat Sangle & Mrs. Jyoti Sangle",
+      parents: "S/O Mrs. Jyoti & Mr. Sampat Rambhau Sangle",
     },
     bride: {
       label: "The Bride",
       name: "Sayali Bhosale",
-      parents: "D/O Mr. Sanjay Bhosale & Mrs. Seema Bhosale",
+      parents: "D/O Mrs. Seema & Mr. Sanjay Dattaramrao Bhosale",
     },
   },
   event: {
