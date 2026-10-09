@@ -15,7 +15,7 @@
   --color-ink: #24161c;
 }
 
+/* Removed x and o jaali pattern based on client feedback */
 .jaali {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23C8B19C' stroke-width='0.8'%3E%3Cpath d='M30 0 60 30 30 60 0 30Z'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3Cpath d='M30 22 38 30 30 38 22 30Z'/%3E%3Cpath d='M0 0 8 8M60 0 52 8M0 60 8 52M60 60 52 52'/%3E%3C/g%3E%3C/svg%3E") !important;
-  background-size: 60px 60px;
+  display: none !important;
 }
